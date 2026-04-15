@@ -1,16 +1,59 @@
-# React + Vite
+# 🚀 Senior AI Engineer Portfolio Architecture
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to the source repository for my interactive, production-grade GenAI Engineering Portfolio. 
 
-Currently, two official plugins are available:
+This repository houses a highly-optimized, performance-driven web application architected to showcase my expertise in Large Language Models (LLMs), Agentic Frameworks (LangGraph, CrewAI, AutoGen), and Enterprise Medical/Competitor AI Systems.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🛠 Web Architecture & Tech Stack
 
-## React Compiler
+This frontend system breaks away from traditional static templates. It is engineered with modern React paradigms to provide a highly interactive, "Agentic" user experience based around a custom dark-theme cyber matrix UI.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Framework**: `React.js` powered by `Vite` for ultra-fast Hot Module Replacement (HMR) and optimized build times.
+- **Micro-Animations**: Uses `Framer Motion` for physics-based scroll targeting, component reveals, and staggered stagger-children container layouts.
+- **Component Styling**: Pure CSS variables and custom `Glassmorphism` utilities targeting high-end graphical blurs `backdrop-filter: blur(12px)`.
+- **Iconography**: `lucide-react` for lightweight, scalable, and tree-shakeable vector injections.
+- **Interactive Markdown**: Fully implements `react-markdown` inside asynchronous Modals to perfectly map actual Python infrastructure documentation onto the glass UI.
 
-## Expanding the ESLint configuration
+## 🧠 Custom Agentic Features Built from Scratch
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+To actually demonstrate AI systems thinking rather than just listing it, the UI features unique logic models:
+
+1. **The Agentic Terminal Simulator (`AgenticTerminal.jsx`)**
+   - Engineered a mock macOS desktop terminal.
+   - Operates on a highly robust `useEffect` execution loop running JavaScript timeouts to literally *type out* my system logs, verifying LLM credentials before rendering DOM context.
+   - Safe against React 18 Strict Mode double-render constraints utilizing strict memory tracking.
+
+2. **Intelligent Flashlight Engine**
+   - Injected a global mouse-tracking coordinate listener inside the root App tree.
+   - Maps `window.clientX` and `clientY` to native CSS properties, driving a massive, luxurious radial gradient beam underneath the user's cursor without relying on heavy React state re-renders.
+
+3. **Responsive Mobile Restructuring**
+   - Hand-coded CSS media queries leveraging Flexbox `wrap-reverse` mechanics. 
+   - When viewed on smartphones, the UI dynamically restructures, prioritizing the Agentic Terminal and Profile Avatar to the top of the viewpoint before the narrative body.
+
+## 🚀 Local Development
+
+To clone, modify, or run this portfolio locally:
+
+```bash
+# 1. Clone the repository
+git clone https://github.com/VijaiVenkatesan/vijai-ai-portfolio.git
+
+# 2. Install dependencies (Vite, Framer Motion, Lucide, React-Markdown)
+npm install
+
+# 3. Start the Hot-Reloading Development Server
+npm run dev
+```
+
+## ☁️ Production Deployment
+
+This infrastructure supports immediate continuous integration (CI/CD) pipelines natively out of the box. Any pushes to the `main` branch will seamlessly trigger an edge deployment build cycle if linked with Vercel or Netlify.
+
+```bash
+npm run build 
+# Generates the highly minified, statically hosted /dist artifact folder.
+```
+
+---
+*Architected and engineered by Vijai Venkatesan.*
