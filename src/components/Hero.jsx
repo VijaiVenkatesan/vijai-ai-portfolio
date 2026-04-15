@@ -5,7 +5,7 @@ import AgenticTerminal from './AgenticTerminal';
 
 const Hero = () => {
   return (
-    <section className="section-container" style={{ minHeight: '100vh', display: 'flex', alignItems: 'center' }}>
+    <section className="section-container hero-section">
       <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', gap: '4rem', flexWrap: 'wrap-reverse', width: '100%' }}>
         <div style={{ flex: '1 1 500px', maxWidth: '800px' }}>
           <motion.div

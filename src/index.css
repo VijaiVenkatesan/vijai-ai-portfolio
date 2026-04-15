@@ -185,3 +185,17 @@ a {
   }
 }
 
+.hero-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding-top: 4rem;
+}
+
+@media (max-width: 1024px) {
+  .hero-section {
+    padding-top: 8rem;
+    align-items: flex-start;
+  }
+}
+
