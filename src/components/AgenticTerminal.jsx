@@ -19,18 +19,26 @@ const AgenticTerminal = () => {
   const [showCursor, setShowCursor] = useState(true);
 
   useEffect(() => {
-    setDisplayedLines([]); // Reset on mount
-    
     // Blinking cursor
     const cursorInterval = setInterval(() => {
       setShowCursor(prev => !prev);
     }, 500);
 
     // Sequential line rendering
-    const timeouts = linesConfig.map((line) => {
-      return setTimeout(() => {
-        setDisplayedLines(prev => [...prev, line]);
+    setDisplayedLines([]);
+    const timeouts = [];
+    
+    linesConfig.forEach((line, index) => {
+      const timeout = setTimeout(() => {
+        setDisplayedLines(prev => {
+          // Double-check to prevent duplicates if timeouts cross-over
+          if (prev.length < index + 1) {
+            return [...prev, line];
+          }
+          return prev;
+        });
       }, line.delay);
+      timeouts.push(timeout);
     });
 
     return () => {

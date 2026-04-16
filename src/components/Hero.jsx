@@ -32,7 +32,11 @@ const Hero = () => {
               maxWidth: '600px'
             }}
           >
-            {portfolioConfig.hero.title}
+            {portfolioConfig.hero.title.split(' AI ').map((part, i) => (
+              <React.Fragment key={i}>
+                {part}{i === 0 ? <span style={{ color: 'var(--accent-cyan)' }}> AI </span> : ''}
+              </React.Fragment>
+            ))}
           </motion.h1>
 
           <motion.p

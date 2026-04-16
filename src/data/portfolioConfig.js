@@ -12,9 +12,11 @@ export const portfolioConfig = {
   // ABOUT SECTION
   // ==========================================
   about: {
-    narrative: `I am an AI/ML Architect specializing in generative artificial intelligence and enterprise-grade system design. For over 7 years, I have architected and deployed advanced AI ecosystems that drastically reduce operational latency and augment human decision-making. 
-    
-My core philosophy is built around "Agentic Engineering"—moving beyond simple prompt wrappers to construct robust, autonomous LLM orchestration frameworks (using LangGraph, CrewAI, AutoGen) that can dynamically search, reason, and act within highly constrained enterprise bounds.`,
+    paragraphs: [
+      "As a Senior AI Engineer with over 7 years of experience in the Applied AI space, I specialize in designing, deploying, and scaling enterprise-grade artificial intelligence systems. My expertise bridges the gap between state-of-the-art research and production-ready engineering, focusing on Generative AI, Large Language Models (LLMs), and highly accurate NLP pipelines.",
+      "I don't just train models; I architect end-to-end AI systems. From developing intelligent document processing pipelines that achieve 93%+ precision, to building multi-agent AI ecosystems that automate complex decision-making, my focus is always on delivering measurable business impact.",
+      "My approach combines strong AI/ML fundamentals with rigorous software architecture practices, ensuring high system reliability, minimal latency, and seamless integrations in cloud environments."
+    ]
   },
 
   // ==========================================
@@ -23,30 +25,33 @@ My core philosophy is built around "Agentic Engineering"—moving beyond simple 
   skills: [
     {
       categoryName: "Frontier LLMs & AI Models",
-      iconName: "Brain", // Rendered dynamically
-      items: [
-        "Anthropic Claude Models", "OpenAI GPT Models", "Google Gemini Models", 
-        "Llama-3.3 & 3.1", "HuggingFace Ecosystem", "Whisper-v3", 
-        "Groq", "Azure OpenAI", "Transformers", "TensorFlow", "Scikit-Learn"
-      ]
+      iconName: "Brain",
+      items: ["Anthropic Claude Models", "OpenAI GPT Models", "Google Gemini Models", "Llama-3.3 & 3.1", "HuggingFace Ecosystem", "Whisper-v3", "Groq", "Azure OpenAI", "Transformers", "TensorFlow", "Scikit-Learn"]
     },
     {
       categoryName: "Agentic AI & RAG Ecosystem",
       iconName: "Bot",
-      items: [
-        "LangGraph", "CrewAI", "AutoGen", "OpenAI Agents SDK", 
-        "Model Context Protocol (MCP)", "Agentic RAG", "Context Engineering", 
-        "Prompt Engineering", "Langchain", "ChromaDB", "Semantic Routing"
-      ]
+      items: ["LangGraph", "CrewAI", "AutoGen", "OpenAI Agents SDK", "Model Context Protocol (MCP)", "Agentic RAG", "Context Engineering", "Prompt Engineering", "Langchain", "ChromaDB", "Semantic Routing"]
     },
     {
-      categoryName: "Core Cloud & Architecture",
+      categoryName: "Core Engineering & Backend",
       iconName: "Server",
-      items: [
-        "Python (Advanced)", "React.js", "Docker & Kubernetes", 
-        "AWS Bedrock / Azure / GCP", "Streamlit", "FastAPI / Node.js", 
-        "MLOps", "Microservices Design"
-      ]
+      items: ["Python (3.9 - 3.11)", "FastAPI", "Django REST Framework", "SQLAlchemy (Async)", "RESTful API Architecture", "ThreadPoolExecutor", "JWT Auth"]
+    },
+    {
+      categoryName: "Data, Web Scraping & Document AI",
+      iconName: "Database",
+      items: ["Pillow", "Tesseract OCR", "EasyOCR", "PyPDF2", "fpdf2", "python-pptx", "DuckDuckGo Search", "yfinance", "Pytrends", "BeautifulSoup4", "Trafilatura", "Pandas", "NumPy"]
+    },
+    {
+      categoryName: "Frontend & UI Engineering",
+      iconName: "Component",
+      items: ["React 18", "Vite", "Streamlit", "Framer Motion", "Recharts", "Lucide React"]
+    },
+    {
+      categoryName: "Cloud, DevOps & Infrastructure",
+      iconName: "Cloud",
+      items: ["Azure VMs", "GCP VMs", "AWS DevOps", "Docker", "GitHub Actions (CI/CD)", "Render.com", "Netlify", "PostgreSQL", "SQLite"]
     }
   ],
 

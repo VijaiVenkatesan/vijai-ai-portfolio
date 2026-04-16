@@ -13,8 +13,12 @@ const About = () => {
       >
         <h2 className="section-title">The Engineering Mindset</h2>
         
-        <div className="glass-card" style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem', fontSize: '1.1rem', whiteSpace: 'pre-line' }}>
-          {portfolioConfig.about.narrative}
+        <div className="glass-card" style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem', fontSize: '1.1rem' }}>
+          {portfolioConfig.about.paragraphs.map((p, i) => (
+            <p key={i} style={{ color: 'var(--text-muted)', lineHeight: '1.7', margin: 0 }}>
+              {p}
+            </p>
+          ))}
         </div>
       </motion.div>
     </section>
