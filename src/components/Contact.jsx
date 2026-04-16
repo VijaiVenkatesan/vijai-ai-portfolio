@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Mail, Code2, Briefcase, MessageSquare } from 'lucide-react';
+import { portfolioConfig } from '../data/portfolioConfig';
 
 const Contact = () => {
   return (
@@ -14,34 +15,33 @@ const Contact = () => {
       >
         <h2 className="section-title" style={{ marginBottom: '1.5rem' }}>Let's Connect</h2>
         <p style={{ color: 'var(--text-muted)', fontSize: '1.15rem', marginBottom: '3rem' }}>
-          Interested in discussing highly scalable AI architectures, enterprise automation, or multi-agent LLM systems? 
-          I am always open to exploring cutting-edge opportunities.
+          {portfolioConfig.contact.footerMessage}
         </p>
 
         <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '1.5rem' }}>
           
-          <a href="mailto:vijaibt1@gmail.com" style={{ textDecoration: 'none' }}>
+          <a href={`mailto:${portfolioConfig.contact.email}`} style={{ textDecoration: 'none' }}>
             <div className="glass-card" style={{ display: 'flex', alignItems: 'center', gap: '1rem', padding: '1rem 2rem', cursor: 'pointer' }}>
               <div style={{ color: 'var(--accent-cyan)' }}><Mail size={24}/></div>
               <span style={{ fontSize: '1.1rem', fontWeight: '500', color: 'var(--text-main)' }}>Email Me</span>
             </div>
           </a>
 
-          <a href="tel:+918825947952" style={{ textDecoration: 'none' }}>
+          <a href={`tel:${portfolioConfig.contact.phone}`} style={{ textDecoration: 'none' }}>
             <div className="glass-card" style={{ display: 'flex', alignItems: 'center', gap: '1rem', padding: '1rem 2rem', cursor: 'pointer' }}>
               <div style={{ color: 'var(--accent-cyan)' }}><MessageSquare size={24}/></div>
-              <span style={{ fontSize: '1.1rem', fontWeight: '500', color: 'var(--text-main)' }}>+91 8825947952</span>
+              <span style={{ fontSize: '1.1rem', fontWeight: '500', color: 'var(--text-main)' }}>{portfolioConfig.contact.phoneDisplay}</span>
             </div>
           </a>
 
-          <a href="https://github.com/VijaiVenkatesan" target="_blank" rel="noreferrer" style={{ textDecoration: 'none' }}>
+          <a href={portfolioConfig.contact.githubUrl} target="_blank" rel="noreferrer" style={{ textDecoration: 'none' }}>
             <div className="glass-card" style={{ display: 'flex', alignItems: 'center', gap: '1rem', padding: '1rem 2rem', cursor: 'pointer' }}>
               <div style={{ color: 'var(--text-main)' }}><Code2 size={24}/></div>
               <span style={{ fontSize: '1.1rem', fontWeight: '500', color: 'var(--text-main)' }}>GitHub Profile</span>
             </div>
           </a>
 
-          <a href="https://www.linkedin.com/in/vijai-v-2b89841a3/" target="_blank" rel="noreferrer" style={{ textDecoration: 'none' }}>
+          <a href={portfolioConfig.contact.linkedinUrl} target="_blank" rel="noreferrer" style={{ textDecoration: 'none' }}>
             <div className="glass-card" style={{ display: 'flex', alignItems: 'center', gap: '1rem', padding: '1rem 2rem', cursor: 'pointer' }}>
               <div style={{ color: 'var(--accent-purple)' }}><Briefcase size={24}/></div>
               <span style={{ fontSize: '1.1rem', fontWeight: '500', color: 'var(--text-main)' }}>LinkedIn Network</span>

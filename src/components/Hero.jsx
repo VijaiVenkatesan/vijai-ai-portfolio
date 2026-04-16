@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Terminal, Code2, Cpu } from 'lucide-react';
 import AgenticTerminal from './AgenticTerminal';
+import { portfolioConfig } from '../data/portfolioConfig';
 
 const Hero = () => {
   return (
@@ -23,18 +24,29 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            style={{ fontSize: '3.5rem', marginBottom: '1.5rem' }}
+            className="section-title gradient-text" 
+            style={{ 
+              textAlign: 'left', 
+              margin: '0 0 1.5rem', 
+              fontSize: '3.5rem',
+              maxWidth: '600px'
+            }}
           >
-            Building Production-Grade <span className="gradient-text">AI Systems</span> That Scale Across Enterprises
+            {portfolioConfig.hero.title}
           </motion.h1>
 
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            style={{ fontSize: '1.2rem', color: 'var(--text-muted)', marginBottom: '3rem', maxWidth: '600px' }}
+            style={{ 
+              color: 'var(--text-muted)', 
+              fontSize: '1.15rem', 
+              marginBottom: '2.5rem', 
+              maxWidth: '550px' 
+            }}
           >
-            7+ years of experience transforming complex business challenges into high-impact, scalable AI solutions specializing in Agentic AI, Large Language Models, and Intelligent Document Processing.
+            {portfolioConfig.hero.subtitle}
           </motion.p>
 
           <motion.div
@@ -73,10 +85,11 @@ const Hero = () => {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6, delay: 0.2 }}
           style={{ flexShrink: 0, margin: '0 auto', display: 'flex', flexDirection: 'column', gap: '3rem', alignItems: 'center' }}
+          className="hero-graphics"
         >
           <img 
-            src="https://github.com/VijaiVenkatesan.png" 
-            alt="Vijai Venkatesan - Senior AI Engineer" 
+            src={portfolioConfig.hero.githubAvatarUrl} 
+            alt="Vijai Venkatesan - Senior AI Engineer"  
             style={{
               width: '260px',
               height: '260px',
