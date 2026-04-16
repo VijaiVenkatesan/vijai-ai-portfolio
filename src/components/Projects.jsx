@@ -108,18 +108,7 @@ const Projects = () => {
               initial={{ scale: 0.9, y: 20 }}
               animate={{ scale: 1, y: 0 }}
               exit={{ scale: 0.9, y: 20 }}
-              style={{
-                width: '100%',
-                maxWidth: '900px',
-                maxHeight: '85vh',
-                background: 'var(--bg-secondary)',
-                border: '1px solid var(--glass-border)',
-                borderRadius: '20px',
-                padding: '2.5rem',
-                overflowY: 'auto',
-                position: 'relative',
-                boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.5)'
-              }}
+              className="modal-container"
               onClick={(e) => e.stopPropagation()}
             >
               <button 
