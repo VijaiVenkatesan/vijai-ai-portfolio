@@ -8,7 +8,7 @@ const Projects = () => {
   const [selectedProject, setSelectedProject] = useState(null);
 
   return (
-    <section id="systems" className="section-container">
+    <section id="projects" className="section-container">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -50,29 +50,30 @@ const Projects = () => {
                 ))}
               </div>
 
-              <div style={{ marginTop: 'auto', display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
+              <div style={{ marginTop: 'auto', display: 'flex', gap: '1rem', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'space-between' }}>
                 <button 
                   onClick={() => setSelectedProject(project)}
-                  className="btn" 
                   style={{ 
-                    background: 'rgba(0, 242, 254, 0.1)', 
-                    color: 'var(--accent-cyan)', 
-                    border: '1px solid rgba(0, 242, 254, 0.3)',
-                    padding: '0.6rem 1.2rem',
+                    background: 'var(--accent-cyan)', 
+                    color: 'var(--bg-main)', 
+                    border: 'none',
+                    padding: '0.7rem 1.4rem',
                     borderRadius: '8px',
                     cursor: 'pointer',
                     display: 'flex',
                     alignItems: 'center',
-                    gap: '0.5rem',
+                    gap: '0.6rem',
                     fontSize: '0.9rem',
-                    fontWeight: '600'
+                    fontWeight: '700',
+                    transition: 'all 0.2s'
                   }}
+                  className="btn-glow"
                 >
-                  <LayoutDashboard size={18} /> Architecture & Details
+                  <LayoutDashboard size={18} /> Architecture Details
                 </button>
-                <div style={{ display: 'flex', gap: '1rem' }}>
-                  <a href={project.github} target="_blank" rel="noreferrer" title="Github Code" style={{ color: 'var(--text-muted)' }}><Code size={22}/></a>
-                  <a href={project.live} target="_blank" rel="noreferrer" title="Live Demo" style={{ color: 'var(--accent-cyan)' }}><ExternalLink size={22}/></a>
+                <div style={{ display: 'flex', gap: '1.2rem', alignItems: 'center' }}>
+                  <a href={project.github} target="_blank" rel="noreferrer" title="Github Code" style={{ color: 'var(--text-muted)', transition: 'color 0.2s' }} onMouseOver={e => e.target.style.color = 'var(--text-main)'} onMouseOut={e => e.target.style.color = 'var(--text-muted)'}><Code size={22}/></a>
+                  <a href={project.live} target="_blank" rel="noreferrer" title="Live Demo" style={{ color: 'var(--accent-cyan)', transition: 'transform 0.2s' }} onMouseOver={e => e.target.style.transform = 'scale(1.1)'} onMouseOut={e => e.target.style.transform = 'scale(1)'}><ExternalLink size={22}/></a>
                 </div>
               </div>
             </motion.div>

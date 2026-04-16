@@ -14,7 +14,7 @@ const iconMap = {
 
 const SkillsGrid = () => {
   return (
-    <section id="stack" className="section-container">
+    <section id="skills" className="section-container">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
