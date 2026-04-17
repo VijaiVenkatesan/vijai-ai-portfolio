@@ -151,7 +151,7 @@ export const portfolioConfig = {
       abstract: "A comprehensive 100% open-source multi-agent AI ecosystem for automated underwriting, fraud detection, and ICD-10 coding.",
       stack: ["Python 3.11", "LangGraph", "Llama-3.3-70b", "Llama-4-Vision", "FastAPI", "ChromaDB", "React"],
       github: "https://github.com/VijaiVenkatesan/medisure-ai-platform",
-      live: "https://medisure-vj-ai.netlify.app",
+      live: "https://medisure-ai-platform.pages.dev/",
       readme: `> Enterprise-grade multi-agent AI platform for insurance claims, medical document intelligence, clinical decision support, and medical underwriting. India-first. 100% open-source. Free to deploy.
 
 ## Platform Architecture
