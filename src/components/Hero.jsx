@@ -14,9 +14,9 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <div style={{ display: 'flex', gap: '1rem', marginBottom: '2rem' }}>
+            <div style={{ display: 'flex', gap: '1rem', marginBottom: '2rem', flexWrap: 'wrap' }}>
               <span className="badge"><Terminal size={14} style={{ marginRight: '6px' }}/> Senior AI Engineer</span>
-              <span className="badge"><Cpu size={14} style={{ marginRight: '6px' }}/> GenAI Architect</span>
+              <span className="badge"><Cpu size={14} style={{ marginRight: '6px' }}/> Voice AI & Agentic Architect</span>
             </div>
           </motion.div>
 

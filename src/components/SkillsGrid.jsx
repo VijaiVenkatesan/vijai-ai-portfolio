@@ -1,9 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Brain, Bot, Database, Server, Component, Cloud } from 'lucide-react';
+import { Brain, Bot, Database, Server, Component, Cloud, Mic } from 'lucide-react';
 import { portfolioConfig } from '../data/portfolioConfig';
 
 const iconMap = {
+  Mic: <Mic size={24} className="text-accent" />,
   Brain: <Brain size={24} className="text-accent" />,
   Bot: <Bot size={24} className="text-accent" />,
   Database: <Database size={24} className="text-accent" />,

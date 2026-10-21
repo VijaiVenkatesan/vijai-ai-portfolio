@@ -4,12 +4,12 @@ import { Terminal, Maximize2, Minus, X } from 'lucide-react';
 
 const linesConfig = [
   { text: "> SYSTEM INITIALIZED...", delay: 500, color: "var(--text-muted)" },
-  { text: "> LOADING AUTOGEN MODULES...", delay: 1000, color: "var(--text-muted)" },
-  { text: "> ESTABLISHING LANGGRAPH EXECUTOR THREADS...", delay: 1500, color: "var(--text-muted)" },
+  { text: "> INITIALIZING VOICE AI & AGENTIC PIPELINES...", delay: 1000, color: "var(--text-muted)" },
+  { text: "> CONNECTING GEMINI 3.1 FLASH LIVE & VERTEX AI 3.5...", delay: 1500, color: "var(--text-muted)" },
   { text: "> [AGENT-01] Analyzing Candidate Profile...", delay: 2200, color: "var(--accent-purple)" },
-  { text: "> [AGENT-01] Validating LLM Engineering Fundamentals...", delay: 2900, color: "var(--accent-cyan)" },
-  { text: "  [SUCCESS] Advanced RAG confirmed.", delay: 3200, color: "#10b981" },
-  { text: "  [SUCCESS] 7+ Years Production scaling confirmed.", delay: 3500, color: "#10b981" },
+  { text: "> [AGENT-01] Validating Enterprise Voice IVR & IDP...", delay: 2900, color: "var(--accent-cyan)" },
+  { text: "  [SUCCESS] 360,000 Calls/Yr IVR System verified.", delay: 3200, color: "#10b981" },
+  { text: "  [SUCCESS] Nearly 7 Years Production scaling confirmed.", delay: 3500, color: "#10b981" },
   { text: "> [SYSTEM] Injecting Profile Context into DOM...", delay: 4200, color: "var(--text-main)" },
   { text: "> ACCESS GRANTED. Welcome to Vijai's Hub.", delay: 5000, color: "#10b981", isBold: true }
 ];

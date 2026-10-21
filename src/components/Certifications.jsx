@@ -60,9 +60,24 @@ const Certifications = () => {
               <div style={{ color: 'var(--text-main)' }}><GraduationCap size={28}/></div>
               <h3 style={{ fontSize: '1.5rem' }}>Education</h3>
             </div>
-            <div>
-              <h4 style={{ fontSize: '1.1rem', color: 'var(--text-main)' }}>{portfolioConfig.education.degree}</h4>
-              <p style={{ color: 'var(--text-muted)', marginTop: '0.2rem' }}>{portfolioConfig.education.institution}</p>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '1.2rem' }}>
+              {Array.isArray(portfolioConfig.education) ? (
+                portfolioConfig.education.map((edu, i) => (
+                  <div key={i} style={{ borderLeft: '2px solid rgba(0, 242, 254, 0.3)', paddingLeft: '1rem' }}>
+                    <h4 style={{ fontSize: '1.05rem', color: 'var(--text-main)', margin: '0 0 0.2rem' }}>{edu.degree}</h4>
+                    <p style={{ color: 'var(--text-muted)', margin: '0 0 0.2rem', fontSize: '0.9rem' }}>{edu.institution}</p>
+                    <div style={{ display: 'flex', gap: '0.8rem', fontSize: '0.8rem', color: 'var(--accent-cyan)' }}>
+                      {edu.grade && <span>{edu.grade}</span>}
+                      {edu.period && <span>• {edu.period}</span>}
+                    </div>
+                  </div>
+                ))
+              ) : (
+                <div>
+                  <h4 style={{ fontSize: '1.1rem', color: 'var(--text-main)' }}>{portfolioConfig.education.degree}</h4>
+                  <p style={{ color: 'var(--text-muted)', marginTop: '0.2rem' }}>{portfolioConfig.education.institution}</p>
+                </div>
+              )}
             </div>
           </motion.div>
         </div>

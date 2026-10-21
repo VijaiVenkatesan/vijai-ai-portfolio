@@ -33,6 +33,23 @@ const Projects = () => {
               style={{ display: 'flex', flexDirection: 'column', height: '100%' }}
             >
               <div style={{ marginBottom: '1.5rem' }}>
+                {project.status && (
+                  <div style={{ marginBottom: '0.85rem' }}>
+                    <span className="badge" style={{ 
+                      background: 'rgba(0, 242, 254, 0.08)', 
+                      borderColor: 'rgba(0, 242, 254, 0.3)', 
+                      color: 'var(--accent-cyan)',
+                      fontSize: '0.78rem',
+                      fontWeight: 600,
+                      display: 'inline-flex',
+                      alignItems: 'center',
+                      gap: '6px'
+                    }}>
+                      <span style={{ width: '6px', height: '6px', borderRadius: '50%', background: 'var(--accent-cyan)' }} />
+                      {project.status}
+                    </span>
+                  </div>
+                )}
                 <h3 style={{ fontSize: '1.4rem', fontWeight: 600, marginBottom: '0.75rem', color: 'var(--text-main)' }}>
                   {project.title}
                 </h3>
@@ -148,36 +165,57 @@ const Projects = () => {
               </h2>
               
               {/* Action Buttons inside Modal */}
-              <div style={{ display: 'flex', gap: '1rem', marginBottom: '2.5rem', flexWrap: 'wrap' }}>
-                <a href={selectedProject.live} target="_blank" rel="noreferrer" style={{
-                  background: 'linear-gradient(135deg, var(--accent-cyan), var(--accent-purple))',
-                  color: '#fff',
-                  padding: '0.8rem 1.8rem',
-                  borderRadius: '8px',
-                  fontWeight: '700',
-                  display: 'inline-flex',
-                  alignItems: 'center',
-                  gap: '10px',
-                  textDecoration: 'none',
-                  boxShadow: '0 10px 20px rgba(0, 0, 0, 0.2)'
-                }}>
-                  <ExternalLink size={20} /> Try Live Demo
-                </a>
-                <a href={selectedProject.github} target="_blank" rel="noreferrer" style={{
-                  background: 'rgba(255, 255, 255, 0.05)',
-                  border: '1px solid rgba(255, 255, 255, 0.1)',
-                  color: '#fff',
-                  padding: '0.8rem 1.8rem',
-                  borderRadius: '8px',
-                  fontWeight: '600',
-                  display: 'inline-flex',
-                  alignItems: 'center',
-                  gap: '10px',
-                  textDecoration: 'none',
-                  transition: 'all 0.2s'
-                }}>
-                  <Code size={20} /> View Source Code
-                </a>
+              <div style={{ display: 'flex', gap: '1rem', marginBottom: '2.5rem', flexWrap: 'wrap', alignItems: 'center' }}>
+                {selectedProject.live && (
+                  <a href={selectedProject.live} target="_blank" rel="noreferrer" style={{
+                    background: 'linear-gradient(135deg, var(--accent-cyan), var(--accent-purple))',
+                    color: '#fff',
+                    padding: '0.8rem 1.8rem',
+                    borderRadius: '8px',
+                    fontWeight: '700',
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    gap: '10px',
+                    textDecoration: 'none',
+                    boxShadow: '0 10px 20px rgba(0, 0, 0, 0.2)'
+                  }}>
+                    <ExternalLink size={20} /> Try Live Demo
+                  </a>
+                )}
+                {selectedProject.github && (
+                  <a href={selectedProject.github} target="_blank" rel="noreferrer" style={{
+                    background: 'rgba(255, 255, 255, 0.05)',
+                    border: '1px solid rgba(255, 255, 255, 0.1)',
+                    color: '#fff',
+                    padding: '0.8rem 1.8rem',
+                    borderRadius: '8px',
+                    fontWeight: '600',
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    gap: '10px',
+                    textDecoration: 'none',
+                    transition: 'all 0.2s'
+                  }}>
+                    <Code size={20} /> View Source Code
+                  </a>
+                )}
+                {selectedProject.status && (
+                  <div style={{
+                    background: 'rgba(0, 242, 254, 0.1)',
+                    border: '1px solid rgba(0, 242, 254, 0.3)',
+                    color: 'var(--accent-cyan)',
+                    padding: '0.8rem 1.4rem',
+                    borderRadius: '8px',
+                    fontWeight: '600',
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    gap: '8px',
+                    fontSize: '0.9rem'
+                  }}>
+                    <span style={{ width: '8px', height: '8px', borderRadius: '50%', background: 'var(--accent-cyan)', display: 'inline-block' }} />
+                    {selectedProject.status}
+                  </div>
+                )}
               </div>
 
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', marginBottom: '2.5rem' }}>
