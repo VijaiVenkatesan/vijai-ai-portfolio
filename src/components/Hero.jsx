@@ -92,21 +92,22 @@ const Hero = () => {
           className="hero-graphics"
         >
           <img 
-            src={portfolioConfig.hero.githubAvatarUrl} 
+            src={portfolioConfig.hero.avatarUrl || portfolioConfig.hero.githubAvatarUrl} 
             alt="Vijai Venkatesan - Senior AI Engineer"  
             style={{
               width: '260px',
               height: '260px',
               borderRadius: '50%',
               objectFit: 'cover',
+              objectPosition: 'center 20%',
               border: '4px solid var(--glass-border)',
-              boxShadow: 'var(--glass-shadow), 0 0 50px rgba(0, 242, 254, 0.15)',
+              boxShadow: 'var(--glass-shadow), 0 0 50px rgba(0, 242, 254, 0.2)',
               background: 'var(--glass-bg)'
             }}
             onError={(e) => {
-              // Fallback block if GitHub avatar blocks hotlinking
+              // Fallback to GitHub avatar if local asset fails to load
               e.target.onerror = null;
-              e.target.src = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%238b92a5'%3E%3Cpath d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z'/%3E%3C/svg%3E";
+              e.target.src = "https://github.com/VijaiVenkatesan.png";
             }}
           />
           

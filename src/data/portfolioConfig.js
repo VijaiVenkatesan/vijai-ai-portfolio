@@ -5,7 +5,8 @@ export const portfolioConfig = {
   hero: {
     title: "Building Production-Grade AI Systems That Scale Across Enterprises",
     subtitle: "AI/ML Engineer with nearly 7 years of experience delivering production-grade AI solutions across Voice AI, Agentic AI, Generative AI, and Intelligent Document Processing (IDP). Currently leading the Heart & Paw Voice AI Agent initiative at Datamatics for a 30-clinic US veterinary chain handling ~360,000 calls/year.",
-    githubAvatarUrl: "https://github.com/VijaiVenkatesan.png",
+    avatarUrl: "/vijai_profile.png",
+    githubAvatarUrl: "/vijai_profile.png",
   },
 
   // ==========================================
